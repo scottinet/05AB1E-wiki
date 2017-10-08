@@ -31,7 +31,7 @@ Command|Elements Popped|Description|
 `,` | `a` | print **`a`**
 `-` | `a,b` | subtraction; push **`(a - b)`**
 `/` | `a,b` | division; push **`(a / b)`**
-`:` | `a,b,c` | a.replace(b, c) / infinite replacement
+`:` | `a,b,c` | **`a.replace(b, c)`** / infinite replacement
 `;` | `a` | halve; push **`a / 2`**
 `<` | `a` | decrement; push **`a - 1`**
 `>` | `a` | increment; push **`a + 1`**
