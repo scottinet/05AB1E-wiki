@@ -307,7 +307,7 @@ Command|Elements Popped|Description|
 `.Á` | - | rotate stack 1 right
 `.•` | - | decompress a base 255 alphabet based string
 
-## Predefined variables and Date-Time commands (`ž`-commands)
+## `ž` - Commands
 
 Command|Description|
 -------|-----------|
