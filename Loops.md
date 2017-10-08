@@ -1,6 +1,6 @@
 # Loops and iterators
 
-<p align="center">Previous tutorial: <a href="https://github.com/Adriandmen/05AB1E/blob/master/docs/md-documentation/basic-data-types.md">Basic data types</a></p>
+<p align="center">Previous tutorial: <a href="https://github.com/Adriandmen/05AB1E/wiki/Basic-Data-Types">Basic data types</a></p>
 
 <br>
 
