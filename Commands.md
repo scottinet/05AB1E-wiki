@@ -55,7 +55,7 @@ Command|Elements Popped|Description|
 `V` | `a` | assign **`Y`** to **`a`**
 `^` | `a,b` | push **`a XOR b`**
 `_` | `a` | push negative bool
-`\`` | `a` | push all the items of **`a`** into the stack
+<code>`</code> | `a` | push all the items of **`a`** into the stack
 `a` | `a` | push **`is_alpha(a)`**
 `b` | `a` | push **`a`** in binary
 `c` | `a,b` | Number of combinations; push **`a`** nCr b
