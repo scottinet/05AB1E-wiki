@@ -80,7 +80,6 @@ Command|Elements Popped|Description|
 `v` | `a` | range loop - **`for y in a`** (y = string, N = index)
 `x` | `a` | push **`a`**, **`a * 2`**
 `z` | `a` | inverse; push **`1 / a`**
-`\|` | - | push the rest of input as an array with strings
 `}` | - | close a single if statement, loop, etc.
 `]` | - | close all loops and if statements
 `{` | `a` | sort; push **`sorted a`**
@@ -269,7 +268,7 @@ Command|Elements Popped|Description|
 `r`  | - | reverse stack
 `w`  | - | wait one second
 `y`  | - | push string variable (used in mapping loops)
-`|`  | - | push the rest of input as an array with strings
+`\|`  | - | push the rest of input as an array with strings
 `}`  | - | used to close if statements, loops, etc.
 `Ƶ`  | - | convert the next char from base 255 to base 10 and add 101
 `€`  | - | for each command
