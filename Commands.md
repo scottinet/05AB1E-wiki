@@ -1,4 +1,4 @@
-## Single-byte Commands
+## Commands
 
 Command|Elements Popped|Description|
 -------|---------------|-----------|
