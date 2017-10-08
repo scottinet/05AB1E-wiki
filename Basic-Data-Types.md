@@ -1,5 +1,5 @@
 # Basic data types
-<p align="center">Next tutorial: <a href="https://github.com/Adriandmen/05AB1E/blob/master/docs/md-documentation/loops.md">Loops</a></p>
+<p align="center">Next tutorial: <a href="https://github.com/Adriandmen/05AB1E/wiki/Loops">Loops</a></p>
 
 <br>
 
