@@ -58,9 +58,9 @@ Command|Elements Popped|Description|
 <code>`</code> | `a` | push all the items of **`a`** into the stack
 `a` | `a` | push **`is_alpha(a)`**
 `b` | `a` | push **`a`** in binary
-`c` | `a,b` | Number of combinations; push **`a`** nCr b
+`c` | `a,b` | Number of combinations; push **`a nCr b`**
 `d` | `a` | push **`is_number(a)`**
-`e` | `a,b` | Number of permutations; push **`a`** nPr b
+`e` | `a,b` | Number of permutations; push **`a nPr b`**
 `f` | `a` | push list of prime factors of **`a`** without duplicates
 `g` | `a` | push the length of **`a`**
 `h` | `a` | push **`hex(a)`**
