@@ -179,11 +179,6 @@ Command|Elements Popped|Description|
 `û` | `a` | push **`palindromized(a)`**, `12345` becomes `123454321` (**`a + a[::-1][1:]`**)
 `ý` | `(a),b` | push **`b.join(a)`** if **`a`** is a list, else **`b.join(stack)`**
 `þ` | `a` | push the digits of **`a`**
-
-## Two-byte Commands
-
-Command|Elements Popped|Description|
--------|---------------|-----------|
 `.å`| `a,b` | push **`a in b`** (vectorized)
 `.A`| `a` | push acronymified **`a`**
 `.b`| `a` | push **`letterified(a)`**
