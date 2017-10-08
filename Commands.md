@@ -80,6 +80,9 @@ Command|Elements Popped|Description|
 `v` | `a` | range loop - **`for y in a`** (y = string, N = index)
 `x` | `a` | push **`a`**, **`a * 2`**
 `z` | `a` | inverse; push **`1 / a`**
+`\|` | - | push the rest of input as an array with strings
+`}` | - | close a single if statement, loop, etc.
+`]` | - | close all loops and if statements
 `{` | `a` | sort; push **`sorted a`**
 `~` | `a,b` | logical or; push **`a OR b`**
 `Λ` | `a,b,c` | store **`a`** canvas with **`{a: num, b: filler, c: pattern}`** (todo: docs)
