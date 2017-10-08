@@ -138,9 +138,9 @@ Command|Elements Popped|Description|
 `Ó` | `a` | push the list of exponents of prime factors (**`2^a`**, **`3^b`**, **`5^c`**, **`7^d`**, etc.)
 `Ô` | `a` | push connected uniquified **`a`**
 `Õ` | `a` | totient; push **`euler_totient(a)`**
-`Ö` | `a,b` | push **`a % b`** == 0
+`Ö` | `a,b` | divisible; push **`a % b == 0`**
 `×` | `a,b` | push **`a × b`** (strings)
-`Ø` | `a` | push **`a`**th prime (zero-indexed)
+`Ø` | `a` | push **`a`** th prime (zero-indexed)
 `Ù` | `a` | push uniquified **`a`**
 `Ú` | `a` | push reverse uniquified **`a`**
 `Û` | `a,b` | push **`a`** with leading **`b`**'s trimmed off
