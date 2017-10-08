@@ -230,8 +230,90 @@ Command|Elements Popped|Description|
 `.ǝ`| `a` | print **`a`** to STDERR
 `.∊`| `a` | push intersected vertical mirror **`a`**
 `.Λ`| `a,b,c` | store **`a`** canvas with **`{a: num, b: filler, c: pattern}`** and push the string to the stack
+`т`  | - | push 100
+`₁`  | - | push 256
+`₂`  | - | push 26
+`₃`  | - | push 95
+`₄`  | - | push 1000
+`₆`  | - | 
+`"`  | - | start/end string literal
+`$`  | - | push 1 and input (used for sequences)
+`'`  | - | push char ( 'a pushes "a" )
+`)`  | - | wrap total stack to an array
+`.`  | - | two char functions
+`0`  | - | numeric literal
+`1`  | - | numeric literal
+`2`  | - | numeric literal
+`3`  | - | numeric literal
+`4`  | - | numeric literal
+`5`  | - | numeric literal
+`6`  | - | numeric literal
+`7`  | - | numeric literal
+`8`  | - | numeric literal
+`9`  | - | numeric literal
+`=`  | - | print last item
+`A`  | - | push 'abcdefghijklmnopqrstuvwxyz'
+`E`  | - | push eval(input())
+`I`  | - | push input()
+`M`  | - | push the largest number in the stack
+`N`  | - | reserved for variables
+`T`  | - | push 10
+`W`  | - | push min(a) without popping
+`X`  | - | integer variable
+`Y`  | - | integer variable
+`Z`  | - | push max(a) without popping
+`[`  | - | infinite loop start
+`\`  | - | delete last item
+`]`  | - | infinite loop end
+`q`  | - | terminates the program
+`r`  | - | reverse stack
+`w`  | - | wait one second
+`y`  | - | push string variable (used in mapping loops)
+`|`  | - | push the rest of input as an array with strings
+`}`  | - | used to close if statements, loops, etc.
+`Ƶ`  | - | convert the next char from base 255 to base 10 and add 101
+`€`  | - | for each command
+`„`  | - | 2 char string / can also be used for 2 compressed strings
+`…`  | - | 3 char string / can also be used for 3 compressed strings
+`Ž`  | - | break if stack is empty
+`‘`  | - | for compressed strings (upper)
+`’`  | - | for compressed strings (no implicit space)
+`“`  | - | for compressed strings (normal)
+`”`  | - | for compressed strings (title)
+`•`  | - | start/end a 1-9 char compressed string
+`ā`  | - | get a; push **`range(1, len(a) + 1)`**
+`¤`  | - | get a; push **`tail(a)`**
+`©`  | - | store a in register_c without popping
+`¬`  | - | get a; push **`head(a)`**
+`®`  | - | push the last item from register_c
+`¯`  | - | push global array
+`²`  | - | push the second item from the input history
+`³`  | - | push the third item from the input history
+`´`  | - | clear global array
+`¶`  | - | push newline character
+`¹`  | - | push the first item from the input history
+`º`  | - | push **`len(stack) > 0`**
+`¼`  | - | counter_variable += 1
+`¾`  | - | push counter_variable
+`Å`  | - | list commands
+`Î`  | - | push 0 and input
+`Ð`  | - | triplicate top of stack (pop **`a`**, push **`a`**, push **`a`**, push **`a`**)
+`ë`  | - | else statement
+`ð`  | - | push a space character
+`õ`  | - | push empty string
+`ü`  | - | pairwise command (vectorizes if the first element is a list)
+`ÿ`  | - | used for string interpolation, pop **`a`** and replace **`ÿ`** with **`str(a)`**
+`.€` | - | debug printer
+`.ä` | - | debug printer
+`.0` | - | throw a division by zero error
+`.g` | - | push length of stack
+`.«` | - | foldr; folds a dyadic command between each element in a list from right to left
+`.»` | - | foldl; folds a dyadic command between each element in a list from right to left with opposite right/left operands
+`.À` | - | rotate stack 1 left
+`.Á` | - | rotate stack 1 right
+`.•` | - | decompress a base 255 alphabet based string
 
-## Predefined variables and Date-Time commands
+## Predefined variables and Date-Time commands (`ž`-commands)
 
 Command|Description|
 -------|-----------|
