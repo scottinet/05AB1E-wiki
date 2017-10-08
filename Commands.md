@@ -159,7 +159,7 @@ Command|Elements Popped|Description|
 `è` | `a,b` | push **`a[b]`**
 `é` | `a` | push sorted **`a`** by length
 `ê` | `a` | push **`sorted_uniquified(a)`**
-`ì` | `a,b` | push **`a.prepend(b)`*
+`ì` | `a,b` | push **`a.prepend(b)`**
 `í` | `a` | push **`[reversed Q for Q in a]`** (short for **`€R`**)
 `î` | `a` | push **`round_up(a)`**
 `ï` | `a` | push **`int(a)`**
