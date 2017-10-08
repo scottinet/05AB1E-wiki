@@ -228,7 +228,7 @@ Command|Elements Popped|Description|
 `.∊`| `a` | push intersected vertical mirror **`a`**
 `.Λ`| `a,b,c` | store **`a`** canvas with **`{a: num, b: filler, c: pattern}`** and push the string to the stack
 
-## Nilads
+## Predefined variables and Date-Time commands
 
 Command|Description|
 -------|-----------|
