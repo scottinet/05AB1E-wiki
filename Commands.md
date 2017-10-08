@@ -14,7 +14,7 @@ Command|Elements Popped|Description|
 `м` | `a,b` | push **`a`** with elements that also occur in **`b`** removed
 `н` | `a` | push **`a[0]`**
 `Θ` | `a` | push 05AB1E truthified **`a`** (a == 1)
-`Σ` | `a` | sort **`a`** by the result of code: usage `ΣCODE}`
+`Σ` | `a` | sort **`a`** by the result of code: usage **`ΣCODE}`**
 `Ω` | `a` | push a random element of **a**
 `≠` | `a` | push 05AB1E falsified **`a`** (a != 1)
 `∊` | `a` | push vertically mirrored **`a`**
@@ -55,11 +55,11 @@ Command|Elements Popped|Description|
 `V` | `a` | assign **`Y`** to **`a`**
 `^` | `a,b` | push **`a XOR b`**
 `_` | `a` | push negative bool
-``` | `a` | push all the items of **`a`** into the stack
+`\`` | `a` | push all the items of **`a`** into the stack
 `a` | `a` | push **`is_alpha(a)`**
 `b` | `a` | push **`a`** in binary
 `c` | `a,b` | Number of combinations; push **`a`** nCr b
-`d` | `a` | push `is_number(a)`
+`d` | `a` | push **`is_number(a)`**
 `e` | `a,b` | Number of permutations; push **`a`** nPr b
 `f` | `a` | push list of prime factors of **`a`** without duplicates
 `g` | `a` | push the length of **`a`**
@@ -113,6 +113,110 @@ Command|Elements Popped|Description|
 `«` | `a,b` | push **`concatenated(a, b)`**
 `°` | `a` | push **`10 ** a`**
 `±` | `a` | bitwise not; push **`~a`**
-`µ` | `a` | `while counter_variable != a, do...`
+`µ` | `a` | **`while counter_variable != a, do...`**
 `·` | `a` | double; push **`2 * a`**
 `¸` | `a` | wrap; push **`[a]`**
+`»` | `(a)` | if **`(a)`** is a list, join it by newlines, else join stack by newlines
+`½` | `a,` | if **1**, then increment the **`counter_variable`**
+`¿` | `a` | push  **`gcd(a)`**
+`À` | `a` | push **`a`** rotated 1 left
+`Á` | `a` | push **`a`** rotated 1 right
+`Â` | `a` | push bifurcated  **`a`**
+`Ã` | `a,b` | push **`a.keep(b)`**
+`Ä` | `a` | absolute value; push **`abs(a)`**
+`Æ` | `a` | push reduced substraction **`a`**
+`Ç` | `a` | ord; push ASCII value of **`a`**
+`È` | `a` | even; push **`a % 2 == 0`**
+`É` | `a` | odd; push **`a % 2 == 1`**
+`Ê` | `a,b` | push **`a != b`**
+`Ë` | `a` | push **1** if all elements are equal else **0**
+`Ì` | `a` | push **`a + 2`**
+`Í` | `a` | push **`a - 2`**
+`Ï` | `a,b` | push the elements from **`a`** at which the same index at **`b`** is **1**
+`Ñ` | `a` | divisors; push **`divisors(a)`**
+`Ò` | `a` | push the list of prime factors of **`a`** (with duplicates)
+`Ó` | `a` | push the list of exponents of prime factors (**`2^a`**, **`3^b`**, **`5^c`**, **`7^d`**, etc.)
+`Ô` | `a` | push connected uniquified **`a`**
+`Õ` | `a` | totient; push **`euler_totient(a)`**
+`Ö` | `a,b` | push **`a % b`** == 0
+`×` | `a,b` | push **`a × b`** (strings)
+`Ø` | `a` | push **`a`**th prime (zero-indexed)
+`Ù` | `a` | push uniquified **`a`**
+`Ú` | `a` | push reverse uniquified **`a`**
+`Û` | `a,b` | push **`a`** with leading **`b`**'s trimmed off
+`Ü` | `a,b` | push **`a`** with trailing **`b`**'s trimmed off
+`Ý` | `a` | Inclusive 0-based range; push **`[0 .. a]`**
+`Þ` | `a` | push **`float(a)`**
+`ß` | `a` | smallest element of list
+`à` | `a` | greatest element of list
+`á` | `a` | push the letters of **`a`**
+`â` | `a,(b)` | push cartesian product
+`ã` | `a,b` | push **`a`** choose **`b`** (cartesian power)
+`ä` | `a,b` | push **`a`** sliced into **`b`** pieces
+`å` | `a,b` | push **`a in b`**
+`æ` | `a` | push **`powerset(a)`**
+`ç` | `a` | push char **`a`**
+`è` | `a,b` | push **`a[b]`**
+`é` | `a` | push sorted **`a`** by length
+`ê` | `a` | push **`sorted_uniquified(a)`**
+`ì` | `a,b` | push **`a.prepend(b)`*
+`í` | `a` | push **`[reversed Q for Q in a]`** (short for **`€R`**)
+`î` | `a` | push **`round_up(a)`**
+`ï` | `a` | push **`int(a)`**
+`ñ` | `a,b,c` | push **`a + b`** merged with **`c`** as merge character
+`ò` | `a` | push inclusive round up **`a`**
+`ó` | `a` | push inclusive round down **`a`**
+`ô` | `a,b` | push **`a`** split in pieces of **`b`**
+`ö` | `a,b` | push **`int(a, b)`**
+`÷` | `a,b` | integer division; push **`a // b`**
+`ø` | `a` | push zipped **`a`**
+`ù` | `a,b` | push **`a`** with elements of length **`b`**
+`ú` | `a,b` | push **`a`** padded with **`b`** spaces in the front
+`û` | `a` | push **`palindromized(a)`**, `12345` becomes `123454321` (**`a + a[::-1][1:]`**)
+`ý` | `(a),b` | push **`b.join(a)`** if **`a`** is a list, else **`b.join(stack)`**
+`þ` | `a` | push the digits of **`a`**
+`.å`| `a,b` | push **`a in b`** (vectorized)
+`.A`| `a` | push acronymified **`a`**
+`.b`| `a` | push **`letterified(a)`**
+`.B`| `a` | push **`squarified(a)`**
+`.c`| `a` | push **`centralized(a)`** focused to the left
+`.C`| `a` | push **`centralized(a)`** focused to the right
+`.D`| `a,b` | push **`b`** copies of **`a`**
+`.e`| `a` | run with experimental python evaluation (does not work in safe mode)
+`.E`| `a` | run with experimental batch evaluation (does not work in safe mode)
+`.h`| `a,b` | bijectively convert **`a`** from base **10** to base **`b`**
+`.H`| `a,b` | bijectively convert **`a`** from base **`b`** to base **10**
+`.j`| `a` | 0-indexed **`max_spaces.join(stack) grid`** (deprecated)
+`.J`| `a` | 1-indexed **`max_spaces.join(stack) grid`** (deprecated)
+`.l`| `a` | push **`is_lower(a)`**
+`.L`| `a,b` | Levenshtein distance; push **`levenshtein(a, b)`**
+`.M`| `a` | push most frequent element in **`a`**
+`.m`| `a` | push least frequent element in **`a`**
+`.n`| `a,b` | logarithm; push **`log_b(a)`**
+`.N`| `a` | push **`hashed(a)`**
+`.o`| `a,b` | push **`overlap(b)`** (deprecated)
+`.O`| `a,b` | push **`connected_overlap(b)`** (deprecated)
+`.p`| `a` | prefixes; push **`prefixes(a)`**
+`.R`| `a` | random element; push **`random_pick(a)`**
+`.r`| `a` | shuffle; push **`random_shuffle(a)`**
+`.s`| `a` | suffixes; push **`suffixes(a)`**
+`.S`| `a,b` | push **1** if **`a > b`**, **-1** if **`a < b`**, **0** if **`a == b`** 
+`.u`| `a` | push **`is_upper(a)`**
+`.V`| `a` | run as 05AB1E code
+`.w`| `a` | push **`a.readall()`** (internet access, doesn't work in safe mode) (returns **0** on error)
+`.W`| `a` | wait **`a`** milliseconds
+`.x`| `a,b` | push the element in **`a`** closest to **`b`**
+`.:`| `a,b,c` | push **`a.replace(b, c)`**
+`.;`| `a,b,c` | push **`a.replace_first(b, c)`**
+`.²`| `a` | log base 2; push **`log_2(a)`**
+`.ï`| `a` | check if a is an integer; push **`is int(a)`**
+`.¿`| `a,(b)` | lcm (hcf); push **`lcm(a, (b))`**
+`.ˆ`| `a` | insert **`a`** into global array and after quit, print **`array[input_1]`**
+`.^`| `a` | insert **`a`** into global array with immediate sorting and after quit, print **`array[input_1]`**
+`.ø`| `a,b` | surround **`a`** with **`b`**
+`.×`| `a,b` | push the list **`a`** repeated **`b`** times
+`.∞`| `a` | push intersected mirror **`a`**
+`.¥`| `a` | push undelta **`a`**
+`.ǝ`| `a` | print **`a`** to STDERR
+`.∊`| `a` | push intersected vertical mirror **`a`**
+`.Λ`| `a,b,c` | store **`a`** canvas with **`{a: num, b: filler, c: pattern}`** and push the string to the stack
