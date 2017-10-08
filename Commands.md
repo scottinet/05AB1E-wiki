@@ -220,3 +220,52 @@ Command|Elements Popped|Description|
 `.ǝ`| `a` | print **`a`** to STDERR
 `.∊`| `a` | push intersected vertical mirror **`a`**
 `.Λ`| `a,b,c` | store **`a`** canvas with **`{a: num, b: filler, c: pattern}`** and push the string to the stack
+
+## Nilads
+
+Command|Description|
+-------|-----------|
+`ža` | push current hours
+`žb` | push current minutes
+`žc` | push current seconds
+`žd` | push current microseconds
+`že` | push current day
+`žf` | push current month
+`žg` | push current year
+`žh` | push [0-9]
+`ži` | push [a-zA-Z]
+`žj` | push [a-zA-Z0-9_]
+`žk` | push [z-aZ-A]
+`žl` | push [z-aZ-A9-0_]
+`žm` | push [9-0]
+`žn` | push [A-Za-z]
+`žo` | push [Z-Az-a]
+`žp` | push [Z-A]
+`žq` | push pi
+`žr` | push e
+`žs` | pop a, push pi to a digits (max. 100000)
+`žt` | pop a, push e to a digits (max. 10000)
+`žu` | push ()<>[]{}
+`žv` | push 16
+`žw` | push 32
+`žx` | push 64
+`žy` | push 128
+`žz` | push 256
+`žA` | push 512
+`žB` | push 1024
+`žC` | push 2048
+`žD` | push 4096
+`žE` | push 8192
+`žF` | push 16384
+`žG` | push 32768
+`žH` | push 65536
+`žI` | push 2147483648
+`žJ` | push 4294967296
+`žK` | push [a-zA-Z0-9]
+`žL` | push [z-aZ-A9-0]
+`žM` | push aeiou
+`žN` | push bcdfghjklmnpqrstvwxyz
+`žO` | push aeiouy
+`žP` | push bcdfghjklmnpqrstvwxz
+`žQ` | push printable ASCII character set (32-128)
+`žR` | push ABC
