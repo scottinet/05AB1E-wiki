@@ -266,7 +266,7 @@ Command|Elements Popped|Description|
 `\|`  | - | push the rest of input as an array with strings
 `}`  | - | used to close if statements, loops, etc.
 `Ƶ`  | - | convert the next char from base 255 to base 10 and add 101
-`€`  | - | for each command
+`€`  | - | Map; Apply the next command to each element in the list.
 `„`  | - | 2 char string / can also be used for 2 compressed strings
 `…`  | - | 3 char string / can also be used for 3 compressed strings
 `Ž`  | - | break if stack is empty
