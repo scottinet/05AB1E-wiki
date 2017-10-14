@@ -58,7 +58,7 @@ Command|Elements Popped|Description|
 `^` | `a,b` | push `a XOR b`
 `_` | `a` | push negative bool
 <code>`</code> | `a` | push all the items of **a** into the stack
-**a** | `a` | push `is_alpha(a)`
+`a` | `a` | push `is_alpha(a)`
 **b** | `a` | push **a** in binary
 **c** | `a,b` | Number of combinations; push `a nCr b`
 `d` | `a` | push `is_number(a)`
