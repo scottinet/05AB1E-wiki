@@ -3,7 +3,7 @@
 Command|Elements Popped|Description|
 -------|---------------|-----------|
 `ǝ` | `a,b,c` | insert **`b`** into **`a`** on location **`c`**
-`ʒ` | `a` | filter **`a`** when the result of code equals 1: usage **`ʒCODE}`**
+`ʒ` | `a` | filter **`a`**. Keep the elements where the result of the code is **`1`**: usage **`ʒCODE}`**
 `α` | `a,b` | push absolute difference of **`a`** and **`b`**
 `β` | `a,b` | push **`a`** converted from base **`b`** (arbitrary)
 `γ` | `a` | push **`a`** split into chunks of consecutive equal elements
