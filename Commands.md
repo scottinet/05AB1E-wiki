@@ -86,7 +86,7 @@ Command|Elements Popped|Description|
 `~` | `a,b` | logical or; push `a OR b`
 `Λ` | `a,b,c` | store **a** canvas with `{a: num, b: filler, c: pattern}` (todo: docs)
 `‚` | `a,b` | push `[a, b]`
-`ƒ` | `a` | push `for N in range(0, **a** + 1)`
+`ƒ` | `a` | push `for N in range(0, a + 1)`
 `†` | `a,b` | push **a** with **b** filtered to the front
 `‡` | `a,b,c` | push `a.transliterate(b -> c)`
 `ˆ` | `a` | add to global array
