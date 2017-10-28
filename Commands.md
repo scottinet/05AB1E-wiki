@@ -70,7 +70,7 @@ Command|Elements Popped|Description|
 `j` | `a` | `max_a_spaces.join(stack)`
 `k` | `a,b` | push the index of **b** in **a** (0 indexed, -1 when not found)
 `l` | `a` | push `lower_case(a)`
-`m` | `a,b` | Exponentiation; push `a  b`
+`m` | `a,b` | exponentiation; push `a ** b`
 `n` | `a` | push `a  2`
 `o` | `a` | push `2  a`
 `p` | `a` | primality checking; push `isPrime(a)`
