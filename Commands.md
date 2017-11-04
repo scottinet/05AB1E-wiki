@@ -1,7 +1,7 @@
 ## Commands
 
 Command|Elements Popped|Description|
--------|---------------|-----------|
+:-----:|:-------------:|-----------|
 `ǝ` | `a,b,c` | insert **b** into **a** on location **c**
 `ʒ` | `a` | filter **a**. Keep the elements where the result of the code is `1`: usage `ʒCODE}`
 `α` | `a,b` | push absolute difference of **a** and **b**
@@ -9,15 +9,17 @@ Command|Elements Popped|Description|
 `γ` | `a` | push **a** split into chunks of consecutive equal elements
 `δ` | `a,b` | get the next command, push double vectorized command
 `ε` | `a` | apply each on **a**: usage `εCODE}`
+`Δ` | `a` | repeat CODE until **a** doesn't change: usage `ΔCODE}`
 `ζ` | `a,(b)` | push zipped **a** with filler **b** (standardized to space)
 `η` | `a` | push the prefixes of **a**
+`и` | `a,b` | push **a** n-repeat (list-multiply) **b**
 `θ` | `a` | push `a[-1]`
 `в` | `a,b` | push **a** converted to base **b** (arbitrary)
 `м` | `a,b` | push **a** with elements that also occur in **b** removed
 `н` | `a` | push `a[0]`
 `Θ` | `a` | push 05AB1E truthified **a** (a == 1)
 `Σ` | `a` | sort **a** by the result of code: usage `ΣCODE}`
-`Ω` | `a` | push a random element of a
+`Ω` | `a` | push a random element of **a**
 `≠` | `a` | push 05AB1E falsified **a** (a != 1)
 `∊` | `a` | push vertically mirrored **a**
 `∍` | `a,b` | push **a** extended/shortened to length **b**
@@ -48,8 +50,8 @@ Command|Elements Popped|Description|
 `J` | `a` | push `''.join(a)` if **a** is list; Else, push `''.join(stack)`
 `K` | `a,b` | push **a** without **b**'s
 `L` | `a` | Inclusive range; push `[1 .. a]`
-`O` | `a` | push total sum (only on lists)
-`P` | `a` | push total product (only on lists)
+`O` | `a` | push total sum of **a** if **a** is list, else total sum of stack
+`P` | `a` | push total product of **a** if **a** is list, else total product of stack
 `Q` | `a,b` | push `a == b` (bool)
 `R` | `a` | push **a** reversed
 `S` | `a` | push all chars **a** separately
@@ -67,12 +69,12 @@ Command|Elements Popped|Description|
 `g` | `a` | push the length of **a**
 `h` | `a` | push `hex(a)`
 `i` | `a` | if statement: `iTHEN}: if true { then }`
-`j` | `a` | `max_a_spaces.join(stack)`
+`j` | `a,b` | Same as `J`, with each substring right justified w/ a minimum length of **b**
 `k` | `a,b` | push the index of **b** in **a** (0 indexed, -1 when not found)
 `l` | `a` | push `lower_case(a)`
 `m` | `a,b` | exponentiation; push `a ** b`
-`n` | `a` | push `a  2`
-`o` | `a` | push `2  a`
+`n` | `a` | push `a**2`
+`o` | `a` | push `2**a`
 `p` | `a` | primality checking; push `isPrime(a)`
 `s` | `a,b` | push `b,a`
 `t` | `a` | square root; push `sqrt(a)`
@@ -105,7 +107,7 @@ Command|Elements Popped|Description|
 `›` | `a,b` | push `a > b`
 `œ` | `a` | permutations; push `permutations(a)`
 `ć` | `a` | push head_extracted **a**: `a[1:], a[0]`
-`Ÿ` | `a,b` | inclusive binary range; push `[a, ..., b]`
+`Ÿ` | `(a,)b` | inclusive binary range; push [a, ..., b] if **b** is not a list, else push [b[0],...,b[1],...,b[n]]
 `¡` | `a,b` | push `a.split(b)` 
 `¢` | `a,b` | push `a.count(b)`
 `£` | `a,b` | push `a[0:b]`
@@ -114,15 +116,15 @@ Command|Elements Popped|Description|
 `§` | `a` | push `str(a)`
 `¨` | `a` | head; push `a[0:-1]`
 `ª` | `a` | push `sentence_cased(a)`
-`«` | `a,b` | push `concatenated(a, b)`
-`°` | `a` | push `10  a`
+`«` | `a,b` | push `merged(a,b)` if both are lists, else push `concatenated(a, b)`
+`°` | `a` | push `10**a`
 `±` | `a` | bitwise not; push `~a`
 `µ` | `a` | `while counter_variable != a, do...`
 `·` | `a` | double; push `2 * a`
-`¸` | `a` | wrap; push `[a]`
-`»` | `(a)` | if `(a)` is a list, join it by newlines, else join stack by newlines
+`¸` | `a` | listify; push `[a]`
+`»` | `(a)` | if `(a)` is **a** list, join it by newlines, else join stack by newlines
 `½` | `a,` | if 1, then increment the `counter_variable`
-`¿` | `a` | push  `gcd(a)`
+`¿` | `(a,)b` | push `gcd(b)` if **b** is list, else push `gcd([b, a])`
 `À` | `a` | push **a** rotated 1 left
 `Á` | `a` | push **a** rotated 1 right
 `Â` | `a` | push bifurcated  **a**
@@ -150,14 +152,14 @@ Command|Elements Popped|Description|
 `Û` | `a,b` | push **a** with leading **b**'s trimmed off
 `Ü` | `a,b` | push **a** with trailing **b**'s trimmed off
 `Ý` | `a` | Inclusive 0-based range; push `[0 .. a]`
-`Þ` | `a` | push `float(a)`
-`ß` | `a` | smallest element of list
-`à` | `a` | greatest element of list
+`Þ` | `a` | push stringified `float(a)`
+`ß` | `a` | extract smallest element of list
+`à` | `a` | extract greatest element of list
 `á` | `a` | push the letters of **a**
-`â` | `a,(b)` | push cartesian product
-`ã` | `a,b` | push **a** choose **b** (cartesian power)
+`â` | `a,b` | push cartesian product
+`ã` | `(a,)b` | push cartesian product of `b.repeat(2)` if **b** is list, else cartesian product of `a.repeat(b)`
 `ä` | `a,b` | push **a** sliced into **b** pieces
-`å` | `a,b` | push `a in b`
+`å` | `a,b` | push `b in a`
 `æ` | `a` | push `powerset(a)`
 `ç` | `a` | push char **a**
 `è` | `a,b` | push `a[b]`
@@ -168,12 +170,12 @@ Command|Elements Popped|Description|
 `î` | `a` | push `round_up(a)`
 `ï` | `a` | push `int(a)`
 `ñ` | `a,b,c` | push `a + b` merged with **c** as merge character
-`ò` | `a` | push inclusive round up **a**
-`ó` | `a` | push inclusive round down **a**
+`ò` | `a` | push `round_nearest(a)` (bankers rounding)
+`ó` | `a` | push `round_down(a)`
 `ô` | `a,b` | push **a** split in pieces of **b**
 `ö` | `a,b` | push `int(a, b)`
 `÷` | `a,b` | integer division; push `a // b`
-`ø` | `a` | push zipped **a**
+`ø` | `(a,)b` | push `zip(b)` if **b** is list, else `zip(a,b)`
 `ù` | `a,b` | push **a** with elements of length **b**
 `ú` | `a,b` | push **a** padded with **b** spaces in the front
 `û` | `a` | push `palindromized(a)`, `12345` becomes `123454321` (`a + a[::-1][1:]`)
@@ -214,7 +216,7 @@ Command|Elements Popped|Description|
 `.;`| `a,b,c` | push `a.replace_first(b, c)`
 `.²`| `a` | log base 2; push `log_2(a)`
 `.ï`| `a` | check if a is an integer; push `is int(a)`
-`.¿`| `a,(b)` | lcm (hcf); push `lcm(a, (b))`
+`.¿`| `(a,)b` | lcm (hcf); push `lcm(b)` if **b** is list, else push `lcm(b, a)`
 `.ˆ`| `a` | insert **a** into global array and after quit, print `array[input_1]`
 `.^`| `a` | insert **a** into global array with immediate sorting and after quit, print `array[input_1]`
 `.ø`| `a,b` | surround **a** with **b**
@@ -224,6 +226,8 @@ Command|Elements Popped|Description|
 `.ǝ`| `a` | print **a** to STDERR
 `.∊`| `a` | push intersected vertical mirror **a**
 `.Λ`| `a,b,c` | store **a** canvas with `{a: num, b: filler, c: pattern}` and push the string to the stack
+`.Ø` | `a` | push 0-indexed number of the greatest prime ≤ **a**
+`.ò` | `a,b` | round **a** with **b** digits precision (bankers rounding)
 `т`  | - | push 100
 `₁`  | - | push 256
 `₂`  | - | push 26
